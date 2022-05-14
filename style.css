@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06181f;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.container .icon{
+    width: 200px;
+    position: relative;
+
+}
+.container .icon path{
+    fill: transparent;
+    stroke: #31e8ff;
+    stroke-width: 10;
+    stroke-dasharray: 2200;
+    stroke-dashoffset: 0;
+}
+.container .icon:hover path{
+    animation: animate 5s linear forwards
+}
+@keyframes animate {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 2200;
+    }
+    80%{
+        stroke-dashoffset: 4400;
+        fill: transparent;
+    }
+    80%{
+        stroke-dashoffset: 4400;
+        fill: #31e8ff;
+    }
+}
